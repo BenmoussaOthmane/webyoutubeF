@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:testwab/navber/navber.dart';
 import 'package:testwab/randomY/youtubev.dart';
+import 'package:testwab/screen/methodology.dart';
+import 'package:testwab/screen/ourstory.dart';
+import 'package:testwab/screen/testimonials.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Home extends StatefulWidget {
@@ -22,18 +25,32 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          children: [
-            NevBer(),
-            SizedBox(
-              height: 200,
-            ),
-            Youtube()
-          ],
+        body: SingleChildScrollView(
+      child: Container(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              NevBer(),
+              SizedBox(
+                height: 50,
+              ),
+              Youtube(),
+              SizedBox(
+                height: 50,
+              ),
+              Methodology(),
+              SizedBox(
+                height: 60,
+              ),
+              OurStory(),
+              SizedBox(
+                height: 60,
+              ),
+              Testimonials()
+            ],
+          ),
         ),
       ),
     ));
